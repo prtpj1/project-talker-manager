@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('./helpers');
+const tokenGenerator = require('./helpers/token');
 
 const app = express();
 app.use(bodyParser.json());
@@ -37,6 +38,15 @@ app.get('/talker/:id', async (req, res) => {
       return res.status(404).json({ message: 'Pessoa palestrante não encontrada' });
     }
     return res.status(200).json(foundTalker);
+  } catch (error) {
+  console.log('🚀 ~ error', error);
+  }
+});
+
+app.post('/login', async (req, res) => {
+  try {
+    const token = tokenGenerator();
+    return res.status(200).json({ token });
   } catch (error) {
   console.log('🚀 ~ error', error);
   }
