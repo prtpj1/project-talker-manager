@@ -7,7 +7,7 @@ const loginValidation = (req, res, next) => {
     password,
   });
 
-  if (!error) next();
+  if (!error) return next();
 
   return res.status(400).json({ message: error.message });
 };

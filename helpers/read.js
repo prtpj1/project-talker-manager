@@ -6,7 +6,7 @@ const read = async () => {
     // console.log('🚀 ~ data', data);
     return JSON.parse(data);
   } catch (error) {
-  console.log('🚀 ~ error', error);
+  console.log('🚀 ~ Read error', error);
   }
 };
 
