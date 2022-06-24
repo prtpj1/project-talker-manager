@@ -67,6 +67,26 @@ app.post('/talker', tokenValidation, talkerValidation, async (req, res) => {
   }
 });
 
+app.put('/talker/:id', tokenValidation, talkerValidation, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { name, age, talk } = req.body;
+
+    const currTalkers = await fs.read();
+    const updTalker = { name, age, talk };
+
+    const foundTalker = currTalkers.find((talker) => talker.id === +(id));
+    if (!foundTalker) return res.status(400).json({ message: '' });
+    
+    Object.assign(foundTalker, updTalker);
+    await fs.write(currTalkers);
+    
+    return res.status(200).json(foundTalker);
+  } catch (error) {
+  console.log('🚀 ~ PUT Talker error', error);
+  }
+});
+
 app.listen(PORT, () => {
   console.log('Online');
 });
