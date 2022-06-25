@@ -87,6 +87,21 @@ app.put('/talker/:id', tokenValidation, talkerValidation, async (req, res) => {
   }
 });
 
+app.delete('/talker/:id', tokenValidation, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const currTalkers = await fs.read();
+
+    const newTalkers = currTalkers.filter((talker) => talker.id !== +(id));
+    console.log('🚀 ~ newTalkers', newTalkers);
+    await fs.write(newTalkers);
+
+    return res.status(204).end();
+  } catch (error) {
+  console.log('🚀 ~ DELETE Talker error', error);
+  }
+});
+
 app.listen(PORT, () => {
   console.log('Online');
 });
