@@ -59,22 +59,28 @@ Neste projeto de BackEnd desenvolvi uma API de um CRUD para palestrantes.<br>
 - No terminal do container rode a aplicação: <br>
 `npm run dev`
 - Abra o programa para fazer requisições HTTP (Insomnia, Postman, Extensões do VSCode ou qualquer outra que preferir) <br><br>
-Crie as requisições do CRUD:<br>
-♻️ Listar todos os palestrantes:<br>
-➡️ Endpoint: **GET** `http://localhost:3000/talker`
-♻️ Procurar um palestrante pela id (*o id é o numero no final do endpoint*):<br>
-➡️ Endpoint: **GET** `http://localhost:3000/talker/1`
-♻️ Efetuar o login (*pode inventar o email e a senha*):<br>
-➡️ Endpoint: **POST** `http://localhost:3000/login`
+- Crie as requisições do CRUD:<br>
+
+### ♻️ Listar todos os palestrantes:
+
+➡️ Endpoint: **GET** `http://localhost:3000/talker`<br><br>
+
+### ♻️ Procurar um palestrante pela id (*o id é o numero no final do endpoint*):
+➡️ Endpoint: **GET** `http://localhost:3000/talker/1`<br><br>
+
+### ♻️ Efetuar o login (*pode inventar o email e a senha*):
+➡️ Endpoint: **POST** `http://localhost:3000/login` <br>
 ```json
 {
 "email": "email@gmail.com",
 "password": "123456"
 }
 ```
-⚠️ **Copie o token que será gerado após o login**<br>
-♻️ Criar um cadastro novo de um palestrante:<br>
-➡️ Endpoint: **POST** `http://localhost:3000/talker`
+⚠️ **Copie o token que será gerado após o login**<br><br>
+
+### ♻️ Criar um cadastro novo de um palestrante:
+➡️ Endpoint: **POST** `http://localhost:3000/talker` <br>
+⚠️Em **Headers** adicione um novo campo com o nome **"Authorization"** e no valor coloque o token que foi gerado quando você fez o login<br>
 Em **Body** selecione JSON e coloque o JSON abaixo definindo nome, idade, avaliação e data da palestra:<br>
 ```json
 {
@@ -86,10 +92,11 @@ Em **Body** selecione JSON e coloque o JSON abaixo definindo nome, idade, avalia
 	}
 }
 ```
-⚠️Em **Headers** adicione um novo campo com o nome **"Authorization"** e no valor coloque o token que foi gerado quando você fez o login no endpoint anterior e crie o novo cadastro<br>
+<br>
 
-♻️ Editar o cadastro de um palestrante através do id:<br>
+### ♻️ Editar o cadastro de um palestrante através do id:
 ➡️ Endpoint: **PUT** `http://localhost:3000/talker/2`
+⚠️Em **Headers** adicione um novo campo com o nome **"Authorization"** e no valor coloque o token que foi gerado quando você fez o login
 No endpoint que lista todos os cadastros, copie um dos cadastros e cole no **Body** JSON. Coloque o id do palestrante no endereço do endpoint e altere quais campos do cadastro desejar.
 ```json
 {
@@ -101,10 +108,9 @@ No endpoint que lista todos os cadastros, copie um dos cadastros e cole no **Bod
   }
 }
 ```
-⚠️Em **Headers** adicione um novo campo com o nome **"Authorization"** e no valor coloque o token que foi gerado quando você fez o login no endpoint anterior e altere o cadastro
+<br>
 
-♻️ Apagar o cadastro de um palestrante através do id:<br>
-➡️ Endpoint: **DELETE** `http://localhost:3000/talker/6`
-
-⚠️Em **Headers** adicione um novo campo com o nome **"Authorization"** e no valor coloque o token que foi gerado quando você fez o login no endpoint anterior e apague o cadastro
+### ♻️ Apagar o cadastro de um palestrante através do id:
+➡️ Endpoint: **DELETE** `http://localhost:3000/talker/6`<br>
+⚠️Em **Headers** adicione um novo campo com o nome **"Authorization"** e no valor coloque o token que foi gerado quando você fez o login e apague o cadastro
 
