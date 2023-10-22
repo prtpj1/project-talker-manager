@@ -1,13 +1,110 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# 21º Projeto: Talker Manager
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+<p align="center">
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/21%20-%20TalkerManager.jpg?raw=true" alt="Header" />
+<hr/>
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+<p align="center">
+<a href="#descrição-do-projeto">Descrição do Projeto</a> •
+<a href="#nesse-projeto-aprendi-e-coloquei-em-prática">Aprendizado</a> •
+<a href="#de-acordo-com-os-requisitos-do-projeto-designados-pela-trybe-aprendi-como">Requisitos</a> •
+<a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a> •
+<a href="#como-rodar-a-aplicação">Rodar a Aplicação</a>
+</p>
+<hr/>
+
+## Descrição do Projeto
+Neste projeto de BackEnd desenvolvi uma API de um CRUD para palestrantes.<br>
+
+
+## Nesse projeto, aprendi e coloquei em prática:
+- Criar os endpoints do CRUD para criar, ler, atualizar e deletar cadastros
+- Criar validações para login utilizando validação por token
+- Criar validações para a criação de cadastros de novos palestrantes
+
+## De acordo com os requisitos do projeto designados pela Trybe aprendi como:
+- ✅ Crie o endpoint GET /talker
+- ✅ Crie o endpoint GET /talker/:id
+- ✅ Crie o endpoint POST /login
+- ✅ Adicione as validações para o endpoint /login
+- ✅ Crie o endpoint POST /talker
+- ✅ Crie o endpoint PUT /talker/:id
+- ✅ Crie o endpoint DELETE /talker/:id
+- ❌ Crie o endpoint GET /talker/search?q=searchTerm
+<br>
+<hr/>
+
+## Tecnologias Utilizadas
+
+### BackEnd:
+- Docker
+- Node.js
+
+<a href="https://hub.docker.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Docker2.png?raw=true" width="50" height="50" alt="MySQL Icon" /></a>
+<a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/NodeJS2.png?raw=true" width="50" height="50" alt="NodeJS Icon" /></a>
+
+## Como rodar a aplicação?
+
+- Confirme que o Docker está rodando no seu computador
+- Clone o repositório: <br>
+`git clone git@github.com:prtpj1/project-talker-manager.git`
+- Acesse a pasta do projeto: <br>
+`cd project-talker-manager`
+- Suba o container para o Docker: <br>
+`docker-compose up -d`
+- Acesse o terminal do container no Docker: <br>
+`docker exec -it talker_manager bash`
+- Instale as dependências: <br>
+`npm install`
+- No terminal do container rode a aplicação: <br>
+`npm run dev`
+- Abra o programa para fazer requisições HTTP (Insomnia, Postman, Extensões do VSCode ou qualquer outra que preferir) <br><br>
+Crie as requisições do CRUD:<br>
+♻️ Listar todos os palestrantes:<br>
+➡️ Endpoint: **GET** `http://localhost:3000/talker`
+♻️ Procurar um palestrante pela id (*o id é o numero no final do endpoint*):<br>
+➡️ Endpoint: **GET** `http://localhost:3000/talker/1`
+♻️ Efetuar o login (*pode inventar o email e a senha*):<br>
+➡️ Endpoint: **POST** `http://localhost:3000/login`
+```json
+{
+"email": "email@gmail.com",
+"password": "123456"
+}
+```
+⚠️ **Copie o token que será gerado após o login**<br>
+♻️ Criar um cadastro novo de um palestrante:<br>
+➡️ Endpoint: **POST** `http://localhost:3000/talker`
+Em **Body** selecione JSON e coloque o JSON abaixo definindo nome, idade, avaliação e data da palestra:<br>
+```json
+{
+	"age": 00, 
+	"name": "nome do palestrante", 
+	"talk": {
+		"rate": 0, 
+		"watchedAt": "00/00/2023"
+	}
+}
+```
+⚠️Em **Headers** adicione um novo campo com o nome **"Authorization"** e no valor coloque o token que foi gerado quando você fez o login no endpoint anterior e crie o novo cadastro<br>
+
+♻️ Editar o cadastro de um palestrante através do id:<br>
+➡️ Endpoint: **PUT** `http://localhost:3000/talker/2`
+No endpoint que lista todos os cadastros, copie um dos cadastros e cole no **Body** JSON. Coloque o id do palestrante no endereço do endpoint e altere quais campos do cadastro desejar.
+```json
+{
+  "name": "Outro nome",
+  "age": 56,
+  "talk": {
+    "watchedAt": "22/10/2019",
+    "rate": 4
+  }
+}
+```
+⚠️Em **Headers** adicione um novo campo com o nome **"Authorization"** e no valor coloque o token que foi gerado quando você fez o login no endpoint anterior e altere o cadastro
+
+♻️ Apagar o cadastro de um palestrante através do id:<br>
+➡️ Endpoint: **DELETE** `http://localhost:3000/talker/6`
+
+⚠️Em **Headers** adicione um novo campo com o nome **"Authorization"** e no valor coloque o token que foi gerado quando você fez o login no endpoint anterior e apague o cadastro
+
