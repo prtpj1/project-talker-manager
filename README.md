@@ -23,14 +23,14 @@ Neste projeto de BackEnd desenvolvi uma API de um CRUD para palestrantes.<br>
 - Criar validações para a criação de cadastros de novos palestrantes
 
 ## De acordo com os requisitos do projeto designados pela Trybe aprendi como:
-- ✅ Crie o endpoint GET /talker
-- ✅ Crie o endpoint GET /talker/:id
-- ✅ Crie o endpoint POST /login
-- ✅ Adicione as validações para o endpoint /login
-- ✅ Crie o endpoint POST /talker
-- ✅ Crie o endpoint PUT /talker/:id
-- ✅ Crie o endpoint DELETE /talker/:id
-- ❌ Crie o endpoint GET /talker/search?q=searchTerm
+- ✅ Criar o endpoint GET /talker
+- ✅ Criar o endpoint GET /talker/:id
+- ✅ Criar o endpoint POST /login
+- ✅ Adicionar as validações para o endpoint /login
+- ✅ Criar o endpoint POST /talker
+- ✅ Criar o endpoint PUT /talker/:id
+- ✅ Criar o endpoint DELETE /talker/:id
+- ❌ Criar o endpoint GET /talker/search?q=searchTerm
 <br>
 <hr/>
 
