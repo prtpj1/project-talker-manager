@@ -59,7 +59,7 @@ Neste projeto de BackEnd desenvolvi uma API de um CRUD para palestrantes.<br>
 - No terminal do container rode a aplicação: <br>
 `npm run dev`
 - Abra o programa para fazer requisições HTTP. Eu usei o Insomnia, mas você pode usar: o Postman, Extensões do VSCode ou qualquer outra que preferir. <br><br>
-- Crie as requisições do CRUD:<br>
+- No programa escolhido, crie as requisições do CRUD como explicado abaixo.<br>
 
 ### ♻️ Listar todos os palestrantes:
 
