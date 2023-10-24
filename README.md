@@ -95,7 +95,7 @@ Em **Body** selecione JSON e coloque o JSON abaixo definindo nome, idade, avalia
 <br>
 
 ### ♻️ Editar o cadastro de um palestrante através do id:
-➡️ Endpoint: **PUT** `http://localhost:3000/talker/2`
+➡️ Endpoint: **PUT** `http://localhost:3000/talker/2` 
 ⚠️Em **Headers** adicione um novo campo com o nome **"Authorization"** e no valor coloque o token que foi gerado quando você fez o login
 No endpoint que lista todos os cadastros, copie um dos cadastros e cole no **Body** JSON. Coloque o id do palestrante no endereço do endpoint e altere quais campos do cadastro desejar.
 ```json
