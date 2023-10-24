@@ -72,8 +72,8 @@ Neste projeto de BackEnd desenvolvi uma API de um CRUD para palestrantes.<br>
 ➡️ Endpoint: **POST** `http://localhost:3000/login` <br>
 ```json
 {
-"email": "email@gmail.com",
-"password": "123456"
+  "email": "email@gmail.com",
+  "password": "123456"
 }
 ```
 ⚠️ **Copie o token que será gerado após o login**<br><br>
@@ -84,12 +84,12 @@ Neste projeto de BackEnd desenvolvi uma API de um CRUD para palestrantes.<br>
 Em **Body** selecione JSON e coloque o JSON abaixo definindo nome, idade, avaliação e data da palestra:<br>
 ```json
 {
-	"age": 00, 
-	"name": "nome do palestrante", 
-	"talk": {
-		"rate": 0, 
-		"watchedAt": "00/00/2023"
-	}
+  "age": 00, 
+  "name": "nome do palestrante", 
+  "talk": {
+    	"rate": 0, 
+    	"watchedAt": "00/00/2023"
+  }
 }
 ```
 <br>
@@ -103,8 +103,8 @@ No endpoint que lista todos os cadastros, copie um dos cadastros e cole no **Bod
   "name": "Outro nome",
   "age": 56,
   "talk": {
-    "watchedAt": "22/10/2019",
-    "rate": 4
+    	"watchedAt": "22/10/2019",
+    	"rate": 4
   }
 }
 ```
