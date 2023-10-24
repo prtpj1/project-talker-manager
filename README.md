@@ -114,3 +114,4 @@ No endpoint que lista todos os cadastros, copie um dos cadastros e cole no **Bod
 ➡️ Endpoint: **DELETE** `http://localhost:3000/talker/6`<br>
 ⚠️Em **Headers** adicione um novo campo com o nome **"Authorization"** e no valor coloque o token que foi gerado quando você fez o login e apague o cadastro
 
+_*OBS: Se tiver alguma dificuldade com as instruções e quiser dar um feedback me mande uma mensagem*_
