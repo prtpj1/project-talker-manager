@@ -84,7 +84,7 @@ Neste projeto de BackEnd desenvolvi uma API de um CRUD para palestrantes.<br>
 Em **Body** selecione JSON e coloque o JSON abaixo definindo nome, idade, avaliação e data da palestra:<br>
 ```json
 {
-  "age": 00, 
+  "age": 10, 
   "name": "nome do palestrante", 
   "talk": {
     	"rate": 0, 
