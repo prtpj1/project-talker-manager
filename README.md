@@ -1,7 +1,7 @@
 # 21º Projeto: Talker Manager
 
 <p align="center">
-<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/21%20-%20TalkerManager.jpg?raw=true" alt="Header" />
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Headers/21%20-%20TalkerManager.jpg?raw=true" alt="Header" />
 <hr/>
 
 <p align="center">
